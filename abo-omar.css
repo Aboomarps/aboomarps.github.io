@@ -1,0 +1,32 @@
+/* Abo Omar: static, lightweight presentation; no runtime hooks. */
+html { background: #020817; }
+body:not(.single-home) { background-color:#020817; background-size:auto 92vh; background-position:center 8vh; }
+body.single-home { position:relative; height:100vh; min-height:640px; background:#020817; overflow:hidden; }
+body.single-home:before { content:""; position:absolute; top:8vh; bottom:0; left:0; right:0; background:url('img.jpg') center top / auto 100% no-repeat; pointer-events:none; }
+body.single-home:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,#020817 0%,transparent 16%,transparent 70%,rgba(2,8,23,.88) 100%); pointer-events:none; }
+.single-home .header-bar { position:relative; z-index:2; width:92%; max-width:1600px; height:64px; margin:16px auto 0; padding:8px 24px; background:rgba(4,14,32,.96); border:1px solid #287cc2; border-radius:12px; box-shadow:0 5px 26px rgba(0,97,255,.15); }
+.single-home .logo-mini { width:46px; height:46px; object-fit:contain; border-radius:50%; }
+.single-home .brand-name { color:#e9f6ff; font-size:23px; letter-spacing:2px; }
+.single-home .header-bar #msgs { font-size:12px; letter-spacing:3px; color:#8faaca; }
+.single-home .status-indicator { font-size:12px; color:#b7cde7; }
+.single-home .status-dot { background:#66c8ff; box-shadow:0 0 8px #1c82e0; }
+.single-home .single-launch { position:absolute; z-index:2; left:0; right:0; top:57%; padding:0 20px; min-height:0; display:flex; justify-content:center; }
+.single-home .console-card { width:410px; min-height:88px; padding:16px 24px; border:1px solid #73c8ff; border-radius:15px; background:linear-gradient(135deg,rgba(9,40,78,.97),rgba(2,14,35,.98)); box-shadow:0 0 0 5px rgba(15,115,210,.10),0 12px 35px rgba(0,0,0,.5); text-decoration:none; }
+.single-home .card-icon { width:48px; height:48px; min-width:48px; margin-right:18px; border-radius:50%; background:#147cdb; color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; }
+.single-home .card-title { font-size:25px; color:#fff; letter-spacing:.3px; }
+.single-home .card-subtitle { margin-top:6px; font-size:13px; color:#a8c5e6; }
+.single-home .console-card:hover,.single-home .console-card:focus { outline:2px solid #d3ebff; outline-offset:5px; background:#10345c; }
+.single-home .footer-bar { position:absolute; z-index:2; bottom:13px; left:0; right:0; width:100%; padding:0 18px; font-size:13px; line-height:1.65; background:transparent; }
+.footer a,.footer-bar a { color:#eaf7ff; text-decoration:none; }
+.contact-line { font-size:11px; letter-spacing:1.3px; color:#a8bed8; }
+.contact-line a { display:inline-block; font-size:19px; font-weight:bold; letter-spacing:1px; margin:0 7px; }
+.contact-separator { color:#5083b6!important; margin:0 9px; }
+.address { color:#e2edfa; font-size:14px; margin:3px 0 5px; }
+.gift-line { color:#bdd4ed; font-size:12px; }
+.gift-line strong { color:#91cfff; }
+.credit-line { font-size:11px; }
+.footer .credit-line span,.footer-bar .credit-line span { color:#e8c891; }
+.footer small,.footer-bar small { font-size:9px; color:#8cabc8; }
+.footer a:focus,.footer-bar a:focus { outline:2px solid #91cfff; }
+@media(min-height:900px) { .single-home .header-bar { margin-top:22px; height:76px; }.single-home .console-card { width:500px; min-height:104px; }.single-home .card-title { font-size:30px; }.single-home .footer-bar { bottom:25px; line-height:1.8; }.contact-line a { font-size:24px; }.address { font-size:18px; }.gift-line { font-size:15px; }.credit-line { font-size:14px; } }
+@media(max-width:700px) { .single-home .header-bar { padding:6px 12px; }.single-home .brand-name { font-size:17px; }.single-home .header-bar #msgs { display:none; }.single-home .status-indicator { font-size:9px; }.single-home .console-card { max-width:88vw; }.single-home .card-title { font-size:22px; }.contact-line { letter-spacing:0; }.contact-line a { font-size:16px; }.address { font-size:12px; }.contact-separator { margin:0 2px; } }
